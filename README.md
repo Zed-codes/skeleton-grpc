@@ -95,7 +95,7 @@ We can now view available RPCs on the selected server:
 show rpc
 ```
 
-The important RPC in this project is SayHello which takes a name as input, makes a query to the already running HTTP server with the entered name, if it is known, the related ID is returned, otherwise 'Stranger' is returned, the gRPC server returns finally "Hello <ID>":
+The important RPC in this project is SayHello which takes a name as input, makes a query to the already running HTTP server with the entered name, if it is known, the related ID is returned, otherwise 'Stranger' is returned, the gRPC server returns finally `Hello <ID>`:
 
 ```
 call SayHello
