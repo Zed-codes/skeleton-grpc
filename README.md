@@ -67,10 +67,37 @@ make dockerun
 
 ## Testing
 
-To test if the gRPC server is working as expected, we make use of gRPC reflections with the tool Evans.
+To test if the gRPC server is working as expected, we make use of gRPC reflection employing the tool Evans.
 
-Please make sure [Evans](https://github.com/ktr0731/evans) is installed on your system, you can install it with Go:
+Make sure [Evans](https://github.com/ktr0731/evans) is installed on your system, you can install it with Go:
 
 ```
 go get github.com/ktr0731/evans
 ```
+
+To start Evans in reflection mode, use the following command which will check for a listening gRPC server on the default port 50051:
+
+```
+evans -r
+```
+
+## Usage
+
+With Evans successfully started in reflection mode with previous command, we can select the service "Greeter" with following command:
+
+```
+service Greeter
+```
+
+We can now view available RPCs on the selected server:
+
+```
+show rpc
+```
+
+The important RPC in this project is SayHello which takes a name as input, makes a query to the already running HTTP server with the entered name, if it is known, the related ID is returned, otherwise 'Stranger' is returned, the gRPC server returns finally "Hello <ID>":
+
+```
+call SayHello
+```
+
