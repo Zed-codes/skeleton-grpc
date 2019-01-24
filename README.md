@@ -1,7 +1,7 @@
 # Skeleton gRPC
 
 This is a very basic implementation of a gRPC server that relies on a HTTP server.
-This project has been done through the course of learning Golang and gRPC.
+This simple project has been done through the course of learning Golang and gRPC.
 
 ## Getting Started
 
@@ -29,7 +29,7 @@ Clone this repository to your local machine:
 git clone https://github.com/Zed-codes/skeleton-grpc
 ```
 
-Point to the repository root folder and use the command 'Make build'
+Point to the repository root folder and use the command `Make build`
 
 ```
 make build
