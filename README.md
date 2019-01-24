@@ -35,7 +35,7 @@ Point to the repository root folder and use the command `Make build`
 make build
 ```
 
-Use the command 'Make run' to run the gRPC and HTTP servers
+Use the command `Make run` to run the gRPC and HTTP servers
 
 ```
 make run
@@ -50,14 +50,14 @@ docker version
 docker ps
 ```
 
-Point to the repository root folder and use the command 'Make dockerize'
+Point to the repository root folder and use the command `Make dockerize`
 This will dockerize the service in a minimal image.
 
 ```
 make dockerize
 ```
 
-Point to the repository root folder and use the command 'Make dockerun'
+Point to the repository root folder and use the command `Make dockerun`
 This will execute above task then run the created image.
 
 ```
