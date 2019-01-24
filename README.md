@@ -1,6 +1,7 @@
 # Skeleton gRPC
 
 This is a very basic implementation of a gRPC server that relies on a HTTP server.
+
 This simple project has been done through the course of learning Golang and gRPC.
 
 ## Getting Started
@@ -66,8 +67,9 @@ make dockerun
 
 ## Testing
 
-To test if the gRPC server is working as expected, we use gRPC reflections with the tool Evans.
-Please make sure [Evans](https://github.com/ktr0731/evans is installed on your system, you can install it with Go:
+To test if the gRPC server is working as expected, we make use of gRPC reflections with the tool Evans.
+
+Please make sure [Evans](https://github.com/ktr0731/evans) is installed on your system, you can install it with Go:
 
 ```
 go get github.com/ktr0731/evans
