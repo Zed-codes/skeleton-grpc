@@ -63,3 +63,12 @@ This will execute above task then run the created image.
 ```
 make dockerun
 ```
+
+## Testing
+
+To test if the gRPC server is working as expected, we use gRPC reflections with the tool Evans.
+Please make sure [Evans](https://github.com/ktr0731/evans is installed on your system, you can install it with Go:
+
+```
+go get github.com/ktr0731/evans
+```
