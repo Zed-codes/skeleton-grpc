@@ -4,11 +4,20 @@ VERSION = $(shell cat version)
 .SILENT: help
 help:
 	echo "Please use one of the following targets:"
-	echo " make build	Build executables."
-	echo " make run	Run the service locally."
+	echo " make test	Performs tests on live servers."
+	echo " make build	Builds executables."
+	echo " make run	Runs the service locally."
 	echo " make dockrize	Dockerize the service."
-	echo " make dockerun	Run the dockerized service."
+	echo " make dockerun	Runs the dockerized service."
 	echo " make clean	Removes created executables if any."
+
+.PHONY: test
+test: build
+	bin/http &
+	bin/grpc &
+	go test -v
+	killall -9 grpc
+	killall -9 http
 
 .PHONY: run
 run: build

@@ -27,6 +27,8 @@ func checkName(w http.ResponseWriter, r *http.Request) {
 			// This could evolve into a databse search in future examples
 			
 			switch name {
+			case "test":
+				id = "000"
 			case "amir":
 				id = "001"
 			case "amin":
@@ -51,7 +53,7 @@ func main() {
 	err := http.ListenAndServe(":9090", nil) // set listen port
 	if err != nil {
         log.Fatal("ListenAndServe: ", err)
-    } 
+    }
 }
 
 // Browse and play with value name: http://localhost:9090/?name=amin

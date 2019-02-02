@@ -33,18 +33,18 @@ func (s *Server) SayHello(ctx context.Context, in *api.HelloRequest) (*api.Hello
 	} else {
 
 		responseData, err := ioutil.ReadAll(response.Body)
-	if err != nil {
-		log.Fatal(err)
-	}
+		if err != nil {
+			log.Fatal(err)
+		}
 	
-	// Formatting the HTTP response string
-	// in future more complex examples, parsing or scrapping will happen here
-	responseData = responseData[8:len(responseData)]
+		// Formatting the HTTP response string
+		// in future more complex examples, parsing or scrapping will happen here
+		responseData = responseData[8:len(responseData)]
 	
-	responseDataFormatted = string(responseData)
-	fmt.Println("Hello", responseDataFormatted)
+		responseDataFormatted = string(responseData)
+		fmt.Println("Hello", responseDataFormatted)
 
-	}
+		}
 
 	return &api.HelloReply{Message: "Hello " + responseDataFormatted}, nil
 }
